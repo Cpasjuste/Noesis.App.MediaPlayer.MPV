@@ -18,13 +18,13 @@ namespace NoesisApp
         [DllImport("kernel32.dll", EntryPoint = "GetProcAddress", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Winapi)]
         private static extern IntPtr GetProcAddress(IntPtr iModule, string strProcName);
 
-        [DllImport("libdl")]
+        [DllImport("libdl.so.2")]
         private static extern IntPtr dlopen(string filename, int flags);
 
-        [DllImport("libdl")]
+        [DllImport("libdl.so.2")]
         private static extern IntPtr dlsym(IntPtr handle, string symbol);
 
-        [DllImport("libdl")]
+        [DllImport("libdl.so.2")]
         private static extern int dlclose(IntPtr handle);
 
         static Mpv()
