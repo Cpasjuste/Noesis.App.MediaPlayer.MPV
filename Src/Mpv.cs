@@ -9,8 +9,6 @@ namespace NoesisApp
 {
     public static class Mpv
     {
-        public static string LibPath = string.Empty;
-
         [DllImport("kernel32.dll")]
         private static extern IntPtr LoadLibrary(string strLib);
 
@@ -33,7 +31,7 @@ namespace NoesisApp
         {
             // windows: https://sourceforge.net/projects/mpv-player-windows/files/libmpv/
             // linux: install libmpv...
-            var path = string.IsNullOrEmpty(LibPath) ? Noesis.Platform.ID == PlatformID.Windows ? "mpv-2.dll" : "libmpv.so.1" : LibPath;
+            var path = Noesis.Platform.ID == PlatformID.Windows ? "mpv-2.dll" : "libmpv.so.1";
             var handle = LoadLib(path);
 
             Create = (MpvCreateFn)Marshal.GetDelegateForFunctionPointer(GetProc(handle, "mpv_create"), typeof(MpvCreateFn));

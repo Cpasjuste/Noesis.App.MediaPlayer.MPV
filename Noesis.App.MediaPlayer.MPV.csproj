@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <Version>3.1.6</Version>
+    <Version>1.0.1</Version>
     <Authors>cpasjuste</Authors>
-    <Description>NoesisGUI MPV MediaPlayer for Windows (x64) and Linux</Description>
+    <Description>NoesisGUI MPV MediaPlayer (Windows/Linux)</Description>
     <Copyright>Copyright (c) 2022 cpasjuste</Copyright>
     <PackageProjectUrl>https://github.com/Cpasjuste/Noesis.App.MediaPlayer.MPV</PackageProjectUrl>
     <PackageIconUrl>https://github.com/Cpasjuste/Noesis.App.MediaPlayer.MPV/Icon-256.png</PackageIconUrl>

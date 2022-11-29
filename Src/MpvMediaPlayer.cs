@@ -7,8 +7,6 @@ namespace NoesisApp
 {
     public class MpvMediaPlayer : MediaPlayer
     {
-        public static string LibPath = string.Empty;
-
         private TextureData _texture;
         private IntPtr _mpvHandle;
         private IntPtr _mpvRenderContext;
@@ -16,9 +14,6 @@ namespace NoesisApp
         private MpvMediaPlayer(MediaElement owner, Uri uri)
         {
             Console.WriteLine("MPVMediaPlayer: {0}", uri);
-
-            // set custom mpv library name/path if requested
-            Mpv.LibPath = LibPath;
 
             // mpv player create
             _mpvHandle = Mpv.Create();
