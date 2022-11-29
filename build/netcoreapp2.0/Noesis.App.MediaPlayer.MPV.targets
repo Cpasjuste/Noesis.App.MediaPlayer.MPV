@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <NativeLibrary>..\..\runtimes\win-x64\native\mpv-2.dll</NativeLibrary>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(NativeLibrary)" Condition="Exists('$(NativeLibrary)')">
+      <Link>$([System.IO.Path]::GetFilename('$(NativeLibrary)'))</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+.idea
+.vs
+.vscode
+*.csproj.user
+*.sln.DotSettings.user
+bin
+obj
+NuGet
