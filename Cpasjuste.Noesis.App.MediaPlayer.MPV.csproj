@@ -1,16 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Version>1.0.1</Version>
     <Authors>cpasjuste</Authors>
     <Description>NoesisGUI MPV MediaPlayer (Windows/Linux)</Description>
     <Copyright>Copyright (c) 2022 cpasjuste</Copyright>
     <PackageProjectUrl>https://github.com/Cpasjuste/Noesis.App.MediaPlayer.MPV</PackageProjectUrl>
     <PackageIconUrl>https://github.com/Cpasjuste/Noesis.App.MediaPlayer.MPV/Icon-256.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/Cpasjuste/Noesis.App.MediaPlayer.MPV</RepositoryUrl>
+    <RespositoryType>git</RespositoryType>
     <PackageIcon>Icon-256.png</PackageIcon>
-    <PackageTags>NoesisGUI XAML GUI C# Linux</PackageTags>
+    <PackageTags>NoesisGUI XAML GUI C#</PackageTags>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RootNamespace>NoesisApp</RootNamespace>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -29,6 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="README.md" PackagePath="" Pack="true" />
     <Content Include="LICENSE.txt" PackagePath="" Pack="true" />
     <Content Include="THIRD_PARTY.txt" PackagePath="" Pack="true" />
     <None Include="Icon-256.png" Pack="true" PackagePath="\" />
