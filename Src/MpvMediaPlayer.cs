@@ -13,7 +13,12 @@ namespace NoesisApp
 
         private MpvMediaPlayer(MediaElement owner, Uri uri)
         {
-            Console.WriteLine("MPVMediaPlayer: {0}", uri);
+            // first check for file existence
+            if (!System.IO.File.Exists(uri.LocalPath))
+            {
+                RaiseMediaFailed(new System.IO.IOException("MpvMediaPlayer: file not found (" + uri + ")"));
+                return;
+            }
 
             // mpv player create
             _mpvHandle = Mpv.Create();
@@ -116,7 +121,7 @@ namespace NoesisApp
                         else
                         {
                             Console.WriteLine("MPVMediaPlayer: OnMediaFailed");
-                            RaiseMediaFailed(new Exception("UpdateMedia failed"));
+                            RaiseMediaFailed(new Exception("MpvMediaPlayer: " + Mpv.GetError((Mpv.MpvError)data.error)));
                         }
 
                         break;
